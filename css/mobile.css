@@ -172,13 +172,23 @@ main
     color: #757575;
 }
 
+.main-tables-container
+{
+    display: flex;
+    height: 375px;
+    overflow-x: scroll;
+    overscroll-behavior: contain;
+    scroll-snap-type: x proximity;
+}
+
 .main-currency-table, .main-commission-table
 {
     width: 70%;
+    scroll-snap-align: center;
     min-width: 235px;
     max-width: 500px;
     height: 360px;
-    margin: 0 auto;
+    margin: 0 10px 0;
     font-family: var(--font-inter);
 }
 
@@ -288,8 +298,9 @@ main
 
 .currency-table--date
 {
+    width: 235px;
     height: 30px;
-    margin: 15px 0 auto;
+    margin: 15px auto;
     background-color: var(--soft-orange);
     padding: 8px;
     border-radius: 8px;
@@ -297,8 +308,9 @@ main
 
 .commission-table--date
 {
+    width: 235px;
     height: 30px;
-    margin: 15px 0 auto;
+    margin: 15px auto;
     background-color: var(--soft-blue);
     padding: 8px;
     border-radius: 8px;
